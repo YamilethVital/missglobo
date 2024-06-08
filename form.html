@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .product {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="process.php" method="post">
+        <div class="product">
+            <label for="product1">Producto 1:</label>
+            <input type="number" id="product1" name="product1" value="0">
+            <span>$10.00</span>
+        </div>
+        <div class="product">
+            <label for="product2">Producto 2:</label>
+            <input type="number" id="product2" name="product2" value="0">
+            <span>$20.00</span>
+        </div>
+        <!-- Repite para los productos restantes -->
+        <div id="total">Total: $0.00</div>
+        <input type="submit" value="Comprar">
+    </form>
+
+    <script>
+        var form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var total = 0;
+            total += document.getElementById('product1').value * 10;
+            total += document.getElementById('product2').value * 20;
+            // Suma para los productos restantes
+            document.getElementById('total').textContent = 'Total: $' + total;
+            form.submit();
+        });
+    </script>
+</body>
+</html>

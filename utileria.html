@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        pq1 = document.getElementById('pq1');
+        pq2 = document.getElementById('pq2');
+        pq3 = document.getElementById('pq3');
+        pq4 = document.getElementById('pq4');
+        pq5 = document.getElementById('pq5');
+        pq6 = document.getElementById('pq6');
+        pq7 = document.getElementById('pq7');
+        pq8 = document.getElementById('pq8');
+        p1 = (pq1 * 80);
+        p2 = (pq2 * 150);
+        p3 = (pq3 * 120);
+        
+        function confirmar() {
+            suma = (p1 + p2 + p3);
+            return confirm('El total a pagar es ' + suma);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+    <body>
+        <script>
+            function mostrar() {
+                document.getElementById('formt').style.display = 'block';
+            }
+    
+            function ocultar() {
+                document.getElementById('formt').style.display = 'none';
+            }
+        </script>
+        <div class="blue-bar">Utileria</div>
+        <marquee behavior="" direction="" class="banner">Cada detalle está pensado para hacer de tu evento una experiencia inolvidable</marquee>
+        <button class="butto" onclick="mostrar()">Comprar</button>
+        <div class="menu">
+            <a href="Ofertas.html">Ofertas</a>
+            <a href="Costos.html">Costos</a>
+            <a href="Galeria.html">Galeria</a>
+            <a href="Tematica.html">Tematica</a>
+            <a href="Tamaños.html">Tamaños</a>
+            <a href="mss.html">Inicio</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="Quienes.html">Quienes</a>
+        </div>
+        <div class="formu" id="formt" style="display: none;">
+            <button onclick="ocultar()" class="ocult">Ocultar</button>
+            <form action="conexion.php"  method="post">
+                <input type="text" name="pq1" placeholder="Cuantos del paquete 1" id="pq1">
+                <input type="text" name="pq2" placeholder="Cuantos del paquete 2" id="pq2">
+                <input type="text" name="pq3" placeholder="Cuantos del paquete 3" id="pq3">
+                <input type="text" name="pq4" placeholder="Cuantos del paquete 2" id="pq4">
+                <input type="text" name="pq5" placeholder="Cuantos del paquete 3" id="pq5">
+                <input type="text" name="pq6" placeholder="Cuantos del paquete 2" id="pq6">
+                <input type="text" name="pq7" placeholder="Cuantos del paquete 3" id="pq7">
+                <input type="text" name="pq8" placeholder="Cuantos del paquete 3" id="pq8">
+                <button type="submit" name="pqt2" onclick='return confirmar()'>Enviar</button>
+            </form>
+        </div>
+        <div class="fondo">
+            <div class="marco">
+                <p>Cintas y Lazos Especiales:<br>
+                <br> Cintas satinadas en una variedad de colores y estilos: <br>
+                <br>$5 por rollo Lazos decorativos con diseños exclusivos: <br>
+                <br>$10 cada unoPegamento y Adhesivos de Alta Resistencia:<br><br>
+                <br><br>Pegamento especial para globos de látex y foil: $15 por tubo<br>
+                <br>Cinta adhesiva de doble cara para superficies diversas: $20 por rollo<br>
+                <br>Soportes y Bases para Globos:<br>
+                <br>Soportes de plástico reforzado para arcos y columnas: $30 cada uno<br>
+                <br>Bases de metal para estructuras de globos grandes: $50 cada una<br>
+                <br>Herramientas de Modelado y Escultura:<br>
+                <br>Inflador eléctrico de alta potencia para globos de diferentes tamaños: $50 cada uno<br>
+                <br>Herramientas de modelado y escultura para crear diseños personalizados: $25 por juego<br>
+                <br>Iluminación y Efectos Especiales:<br>
+                <br>Luces LED de colores para resaltar la decoración: $10 por juego<br>
+                <br>Efectos especiales como máquinas de humo y proyectores de luz: Precio personalizado según el equipo requerido<br>
+                <br>Accesorios de Temática Específica:<br>
+                <br>Figuras y adornos temáticos para complementar la decoración: Precios variables según el diseño y la disponibilidad<br>
+                <br>
+            </div>
+        </div>
+        
+    </body>
+</html>
