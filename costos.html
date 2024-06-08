@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        pq1 = document.getElementById('pq1');
+        pq2 = document.getElementById('pq2');
+        pq3 = document.getElementById('pq3');
+        p1 = (pq1 * 80);
+        p2 = (pq2 * 150);
+        p3 = (pq3 * 120);
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+    <body>
+        <script>
+            function calcular() {
+                var pq1 = document.getElementById('pq1').value;
+                var mult1 = document.getElementById('mult-1').value;
+                var pq2 = document.getElementById('pq2').value;
+                var mult2 = document.getElementById('mult-2').value;
+                var pq3 = document.getElementById('pq3').value;
+                var mult3 = document.getElementById('mult-3').value;
+
+                var total1 = pq1 * mult1;
+                var total2 = pq2 * mult2;
+                var total3 = pq3 * mult3;
+                var total = total1 + total2 + total3;
+                document.getElementById('resultado').innerHTML ="Total a pagar: " + total + ".";
+                document.getElementById('total').value = total;
+            }
+            function mostrar() {
+                document.getElementById('formt').style.display = 'block';
+                document.getElementById('form2').style.display = 'none';
+                document.getElementById('form1').style.display = 'block';
+            }
+    
+            function ocultar() {
+                document.getElementById('formt').style.display = 'none';
+            }
+            function most() {
+                var pq4 = document.getElementById('pq4').value;
+    var pq1 = document.getElementById('pq1').value;
+    var mult1 = document.getElementById('mult-1').value;
+    var pq2 = document.getElementById('pq2').value;
+    var mult2 = document.getElementById('mult-2').value;
+    var pq3 = document.getElementById('pq3').value;
+    var mult3 = document.getElementById('mult-3').value;
+
+    var total1 = pq1 * mult1;
+    var total2 = pq2 * mult2;
+    var total3 = pq3 * mult3;
+    var total = total1 + total2 + total3;
+
+    // Guarda los totales en el formulario
+    document.getElementById('total4').value = pq4;
+    document.getElementById('total1').value = total1;
+    document.getElementById('total2').value = total2;
+    document.getElementById('total3').value = total3;
+    document.getElementById('resulta').innerHTML ="Total a pagar: " + total + ".";
+    document.getElementById('total').value = total;
+
+    // Muestra el segundo formulario
+    document.getElementById('form2').style.display = 'block';
+    document.getElementById('form1').style.display = 'none';
+}
+function canselar(){
+    document.getElementById('form2').style.display = 'none';
+}
+    
+            function ocul() {
+                document.getElementById('form').style.display = 'none';
+            }
+        </script>
+        <div class="blue-bar">Costos</div>
+        <marquee behavior="" direction="" class="banner">Cada detalle está pensado para hacer de tu evento una experiencia inolvidable</marquee>
+        <button class="butto" onclick="mostrar()">Comprar</button>
+        <div class="menu">
+            <a href="Ofertas.html">Ofertas</a>
+            <a href="mss.html">Inicio</a>
+            <a href="Galeria.html">Galeria</a>
+            <a href="Tematica.html">Tematica</a>
+            <a href="Tamaños.html">Tamaños</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="utileria.html">Utileria</a>
+            <a href="Quienes.html">Quienes</a>
+        </div>
+        <div class="formu" id="formt" style="display: none;">
+            <button onclick="ocultar()" class="ocult">Ocultar</button>
+            <form id="form1" action="" method="post" style="display: none;">
+                    <h1>Cantidad de paquetes vas a querer</h1>
+                    <input type="text" placeholder="Contraseña (a tu eleccion)" id="pq4">
+                    <input type="number" name="pq1" placeholder="Paquete Elegancia Suprema" id="pq1">
+                    <input type="number" id="mult-1" name="mult-1" value="3650" style="display: none;" readonly>
+                    <input type="number" name="pq2" placeholder="Paquete Lujo Absoluto" id="pq2">
+                    <input type="number" id="mult-2" name="mult-2" value="5700" style="display: none;" readonly>
+                    <input type="number" name="pq3" placeholder="Paquete Exclusivo Premium" id="pq3">
+                    <input type="number" id="mult-3" name="mult-3" value="5500" style="display: none;" readonly>
+                    <p id="resultado">Total a pagar: </p>
+                    <input type="text" id="total" name="total" style="display: none;">
+                    <button type="button" onclick="calcular()">Calcular</button>
+                    <button type="button" onclick="most()" >Enviar</button>
+            </form>
+            <form id="form2" action="conexion.php" method="post" style="display: none;">
+                <center>
+                    <label for="total4">Contraseña:</label><br>
+                <input type="text" name="total4" id="total4" readonly><br>
+                    <label for="total1">Paquete Uno:</label><br>
+                <input type="text" name="total1" id="total1" readonly><br>
+                <label for="total2">Paquete Dos:</label><br>
+                <input type="text" name="total2" id="total2" readonly><br>
+                <label for="total3">Paquete Tres:</label><br>
+                <input type="text" name="total3" id="total3" readonly><br>
+                <p id="resulta" name="resulta">Total a pagar: </p>
+                <input type="hidden" id="total" name="total" style="display: block;">
+                <button type="submit" name="pqt1">Aceptar</button>
+                <button type="button" onclick="ocultar()">Cancelar</button>
+                </center>
+                
+            </form>
+        </div>
+        
+        <div class="fondo">
+            <div class="marco">
+                <p>Paquete de Elegancia Suprema: Arco principal de entrada con diseño exclusivo y elementos de lujo: $1500 Centro de mesa personalizado con detalles ornamentales únicos: $150 cada unoDecoración aérea con globos suspendidos y efectos especiales: $2000<br>
+                <br> Paquete de Lujo Absoluto:Diseño completo de la locación con arcos, columnas y guirnaldas de alta gama: $2500Centro de mesa con esculturas de globos personalizadas y accesorios de primera calidad: $200 cada uno Decoración temática detallada con iluminación ambiental y efectos visuales avanzados: $3000<br>
+                <br> Paquete Exclusivo Premium: Experiencia completa de decoración con diseños innovadores y materiales de lujo: $5000 Centro de mesa con globos de cristal y elementos decorativos de colección: $500 cada unoServicio VIP con atención personalizada, coordinación de eventos y detalles exclusivos: Precio personalizado según las necesidades del cliente<br>
+                <br>Estos paquetes ofrecen una experiencia de decoración exclusiva y de alta gama para eventos de élite, con diseños personalizados, materiales premium y servicios adicionales para satisfacer las demandas más exigentes<br>
+            </div>
+        </div>
+        
+    </body>
+</html>
