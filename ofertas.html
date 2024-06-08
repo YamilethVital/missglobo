@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        pq1 = document.getElementById('pq1');
+        pq2 = document.getElementById('pq2');
+        pq3 = document.getElementById('pq3');
+        pq4 = document.getElementById('pq4');
+        p1 = (pq1 * 80);
+        p2 = (pq2 * 150);
+        p3 = (pq3 * 120);
+        p4 = (pq4 * 200);
+        
+        function confirmar() {
+            suma = p1 + p2 + p3 + p4;
+            return confirm('El total a pagar es ' + suma);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+    <body>
+        <script>
+            function calcular() {
+                var pq1 = document.getElementById('pq1').value;
+                var mult1 = document.getElementById('mult-1').value;
+                var pq2 = document.getElementById('pq2').value;
+                var mult2 = document.getElementById('mult-2').value;
+                var pq3 = document.getElementById('pq3').value;
+                var mult3 = document.getElementById('mult-3').value;
+
+                var total1 = pq1 * mult1;
+                var total2 = pq2 * mult2;
+                var total3 = pq3 * mult3;
+                var total = total1 + total2 + total3;
+                document.getElementById('resultado').innerHTML ="Total a pagar: " + total + ".";
+                document.getElementById('total').value = total;
+            }
+            function mostrar() {
+                document.getElementById('formt').style.display = 'block';
+                document.getElementById('form2').style.display = 'none';
+                document.getElementById('form1').style.display = 'block';
+            }
+    
+            function ocultar() {
+                document.getElementById('formt').style.display = 'none';
+            }
+            function most() {
+                var pq4 = document.getElementById('pq4').value;
+                
+    var mult5 = document.getElementById('mult-5').value;
+                var pq5 = document.getElementById('pq5').value;
+    var pq1 = document.getElementById('pq1').value;
+    var mult1 = document.getElementById('mult-1').value;
+    var pq2 = document.getElementById('pq2').value;
+    var mult2 = document.getElementById('mult-2').value;
+    var pq3 = document.getElementById('pq3').value;
+    var mult3 = document.getElementById('mult-3').value;
+
+    var total1 = pq1 * mult1;
+    var total2 = pq2 * mult2;
+    var total3 = pq3 * mult3;
+    var total5 = pq5 * mult5;
+    var total = total1 + total2 + total3 + total5;
+
+    // Guarda los totales en el formulario
+    document.getElementById('total4').value = pq4;
+    document.getElementById('total1').value = total1;
+    document.getElementById('total2').value = total2;
+    document.getElementById('total3').value = total3;
+    document.getElementById('total5').value = total5;
+    document.getElementById('resulta').innerHTML ="Total a pagar: " + total + ".";
+    document.getElementById('total').value = total;
+
+    // Muestra el segundo formulario
+    document.getElementById('form2').style.display = 'block';
+    document.getElementById('form1').style.display = 'none';
+}
+        </script>
+        <div class="blue-bar">Ofertas</div>
+        <marquee behavior="" direction="" class="banner">Cada detalle está pensado para hacer de tu evento una experiencia inolvidable</marquee>
+        <button class="butto" onclick="mostrar()">Comprar</button>
+        <div class="menu">
+            <a href="costos.html">Costos</a>
+            <a href="mss.html">Inicio</a>
+            <a href="Galeria.html">Galeria</a>
+            <a href="Tematica.html">Tematica</a>
+            <a href="Tamaños.html">Tamaños</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="utileria.html">Utileria</a>
+            <a href="Quienes.html">Quienes</a>
+        </div>
+        <div class="formu" id="formt" style="display: none;">
+            <button onclick="ocultar()" class="ocult">Ocultar</button>
+            <form id="form1" action="" method="post" style="display: none;">
+                    <h1>Cantidad de paquetes vas a querer</h1>
+                    <input type="text" placeholder="Contraseña (a tu eleccion)" id="pq4">
+                    <input type="number" name="pq1" placeholder="Paquete Básico de Decoración" id="pq1">
+                    <input type="number" id="mult-1" name="mult-1" value="80" style="display: none;" readonly>
+                    <input type="number" name="pq2" placeholder="Arco de Globos de Bienvenida" id="pq2">
+                    <input type="number" id="mult-2" name="mult-2" value="150" style="display: none;" readonly>
+                    <input type="number" name="pq3" placeholder="Paquete Deluxe de Decoración" id="pq3">
+                    <input type="number" id="mult-3" name="mult-3" value="200" style="display: none;" readonly>
+                    <input type="number" name="pq5" placeholder="Columnas de Globos Temáticas" id="pq5">
+                    <input type="number" id="mult-5" name="mult-5" value="120" style="display: none;" readonly>
+                    <p id="resultado">Total a pagar: </p>
+                    <input type="text" id="total" name="total" style="display: none;">
+                    <button type="button" onclick="calcular()">Calcular</button>
+                    <button type="button" onclick="most()" >Enviar</button>
+            </form>
+            <form id="form2" action="conexion.php" method="post" style="display: none;">
+                <center>
+                    <label for="total4">Contraseña:</label><br>
+                <input type="text" id="total4" name="total4" readonly><br>
+                    <label for="total1">Paquete Básico de Decoración:</label><br>
+                <input type="text" id="total1" name="total1" readonly><br>
+                <label for="total2">Arco de Globos de Bienvenida:</label><br>
+                <input type="text" id="total2" name="total2" readonly><br>
+                <label for="total3">Paquete Deluxe de Decoración:</label><br>
+                <input type="text" id="total3" name="total3" readonly><br>
+                <label for="total5">Columnas de Globos Temáticas:</label><br>
+                <input type="text" id="total5" name="total5" readonly><br>
+                <p id="resulta" name="resulta">Total a pagar: </p>
+                <input type="hidden" name="resulta" id="resulta">
+                <button type="submit" name="pqt">Aceptar</button>
+                <button type="button" onclick="ocultar()">Cancelar</button>
+                </center>
+                
+            </form>
+        </div>
+        <div class="fondo">
+            <div class="marco">
+                <p>1.Paquete Básico de Decoración:Incluye 50 globos de látex, cintas satinadas y pegamento especial. Precio regular: $100¡Oferta especial!: $80C<br>
+                    <br> 2.Arco de Globos de Bienvenida: Un arco de globos impresionante para dar la bienvenida a tus invitados. Precio regular: $200 ¡Oferta especial!: $150<br>
+                    <br>3.Columnas de Globos Temáticas: Dos columnas de globos decoradas con la temática de tu elección. Precio regular: $150 ¡Oferta especial!: $120<br>
+                    <br>4.Paquete Deluxe de Decoración: Incluye 100 globos de látex, cintas satinadas, pegamento especial y una figura temática. Precio regular: $250 ¡Oferta especial!: $200 <br>
+                    <br>5.Decoración Personalizada para Eventos Especiales:Diseño y montaje personalizado de la decoración de globos según tus preferencias y temática del evento.Precio regular: Variable según el proyecto¡Oferta especial!: 10% de descuento en el precio final<br>
+                    <br>
+            </div>
+        </div>
+        
+    </body>
+</html>
